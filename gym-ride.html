@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fitness Hub | Elite Fitness Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            500: '#f97316', // Orange-500
+                            600: '#ea580c', // Orange-600
+                        },
+                        dark: {
+                            900: '#09090b', // Zinc-950
+                            800: '#18181b', // Zinc-900
+                            700: '#27272a', // Zinc-800
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-dark-900 text-white antialiased selection:bg-brand-500 selection:text-white">
+
+    <nav class="fixed w-full z-50 bg-dark-900/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fa-solid fa-dumbbell text-brand-500 text-2xl"></i>
+                    <span class="font-bold text-2xl tracking-tighter text-white">GYM<span class="text-brand-500">RIDE</span></span>
+                </div>
+
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Home</a>
+                    <a href="#programs" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Programs</a>
+                    <a href="#trainers" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Trainers</a>
+                    <a href="#pricing" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Pricing</a>
+                </div>
+
+                <div class="hidden md:flex">
+                    <a href="#" class="bg-brand-600 hover:bg-brand-500 text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all shadow-lg shadow-brand-500/20">
+                        Join Now
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-brand-500 text-xs font-bold uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                        New Facility Open
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight leading-tight">
+                        Ride Your Way <br>
+                        To <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-yellow-500">Peak Fitness</span>
+                    </h1>
+                    <p class="text-lg text-gray-400 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        Experience a premium training environment designed for serious results. Top-tier equipment, expert coaching, and a community that drives you forward.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#" class="px-8 py-4 bg-white text-dark-900 rounded-full font-bold hover:bg-gray-200 transition duration-300 text-center">
+                            Start Free Trial
+                        </a>
+                        <a href="#programs" class="px-8 py-4 border border-white/20 rounded-full font-bold hover:bg-white/5 transition duration-300 text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-play text-xs"></i> View Programs
+                        </a>
+                    </div>
+                    
+                    <div class="pt-4 flex items-center justify-center lg:justify-start gap-4 text-sm text-gray-500">
+                        <div class="flex -space-x-2">
+                            <div class="w-8 h-8 rounded-full bg-gray-700 border-2 border-dark-900"></div>
+                            <div class="w-8 h-8 rounded-full bg-gray-600 border-2 border-dark-900"></div>
+                            <div class="w-8 h-8 rounded-full bg-gray-500 border-2 border-dark-900"></div>
+                        </div>
+                        <p>Joined by 2,000+ members</p>
+                    </div>
+                </div>
+
+                <div class="relative hidden lg:block">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-600 to-transparent opacity-20 rounded-3xl transform rotate-3"></div>
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Athlete training" class="relative rounded-3xl shadow-2xl shadow-black/50 border border-white/10 transform -rotate-2 hover:rotate-0 transition duration-500 object-cover h-[600px] w-full">
+                    
+                    <div class="absolute bottom-10 -left-10 bg-dark-800 p-4 rounded-2xl border border-white/10 shadow-xl flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
+                        <div class="bg-brand-500/20 p-3 rounded-full text-brand-500">
+                            <i class="fa-solid fa-heart-pulse text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase">Calories Burned</p>
+                            <p class="text-xl font-bold text-white">1,200 kcal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-dark-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose The Fitness Hub?</h2>
+                <p class="text-gray-400">We don't just provide machines; we provide an ecosystem for your success.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group bg-dark-900 p-8 rounded-2xl border border-white/5 hover:border-brand-500/50 transition duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition">
+                        <i class="fa-solid fa-dumbbell text-9xl"></i>
+                    </div>
+                    <div class="w-12 h-12 bg-brand-600/20 rounded-lg flex items-center justify-center text-brand-500 mb-6">
+                        <i class="fa-solid fa-dumbbell text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Premium Equipment</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Access the latest biomechanically precise machinery and free weights tailored for every muscle group.</p>
+                </div>
+
+                <div class="group bg-dark-900 p-8 rounded-2xl border border-white/5 hover:border-brand-500/50 transition duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition">
+                        <i class="fa-solid fa-users text-9xl"></i>
+                    </div>
+                    <div class="w-12 h-12 bg-brand-600/20 rounded-lg flex items-center justify-center text-brand-500 mb-6">
+                        <i class="fa-solid fa-users text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Expert Community</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Join a motivated tribe of individuals. Group classes and community events keep the energy high.</p>
+                </div>
+
+                <div class="group bg-dark-900 p-8 rounded-2xl border border-white/5 hover:border-brand-500/50 transition duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition">
+                        <i class="fa-solid fa-apple-whole text-9xl"></i>
+                    </div>
+                    <div class="w-12 h-12 bg-brand-600/20 rounded-lg flex items-center justify-center text-brand-500 mb-6">
+                        <i class="fa-solid fa-apple-whole text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Nutrition & Plans</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Fitness is 70% diet. Get personalized meal plans and guidance from certified nutritionists.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs" class="py-24 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Explore Our Programs</h2>
+                    <p class="text-gray-400">Tailored specifically to your fitness goals.</p>
+                </div>
+                <a href="#" class="hidden md:block text-brand-500 font-semibold hover:text-brand-400">View All Programs &rarr;</a>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="group relative h-96 rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Strength" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">Hypertrophy</h3>
+                        <p class="text-sm text-gray-300 mb-4 line-clamp-2">Build muscle mass with science-backed resistance training protocols.</p>
+                        <span class="text-brand-500 text-sm font-bold uppercase tracking-wider group-hover:text-white transition">Learn More</span>
+                    </div>
+                </div>
+
+                <div class="group relative h-96 rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5jrCISQIvPjA5WrwqxXW9rMAdVNW1DeVW6A&s" alt="Cardio" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">Endurance</h3>
+                        <p class="text-sm text-gray-300 mb-4 line-clamp-2">High-intensity interval training to boost stamina and burn fat.</p>
+                        <span class="text-brand-500 text-sm font-bold uppercase tracking-wider group-hover:text-white transition">Learn More</span>
+                    </div>
+                </div>
+
+                <div class="group relative h-96 rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Yoga" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">Mobility & Yoga</h3>
+                        <p class="text-sm text-gray-300 mb-4 line-clamp-2">Enhance flexibility and recovery with our expert yoga instructors.</p>
+                        <span class="text-brand-500 text-sm font-bold uppercase tracking-wider group-hover:text-white transition">Learn More</span>
+                    </div>
+                </div>
+                
+                <div class="group relative h-96 rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Crossfit" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">Functional</h3>
+                        <p class="text-sm text-gray-300 mb-4 line-clamp-2">Real-world movement patterns to improve daily life strength.</p>
+                        <span class="text-brand-500 text-sm font-bold uppercase tracking-wider group-hover:text-white transition">Learn More</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center md:hidden">
+                <a href="#" class="text-brand-500 font-semibold hover:text-brand-400">View All Programs &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="trainers" class="py-24 bg-dark-800 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Meet The Elite</h2>
+                <p class="text-gray-400">Guided by industry-leading professionals.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-dark-900 rounded-2xl p-8 text-center border border-white/5 hover:border-brand-500 transition duration-300 group">
+                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 ring-4 ring-dark-800 group-hover:ring-brand-500 transition">
+                        <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Trainer" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold">Alex Ryker</h3>
+                    <p class="text-brand-500 text-sm uppercase font-semibold mb-4">Head Coach</p>
+                    <p class="text-gray-400 text-sm mb-6">"Pain is temporary. Quitting lasts forever."</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="#" class="text-gray-500 hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-white"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-dark-900 rounded-2xl p-8 text-center border border-white/5 hover:border-brand-500 transition duration-300 group">
+                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 ring-4 ring-dark-800 group-hover:ring-brand-500 transition">
+                        <img src="https://images.ctfassets.net/qw8ps43tg2ux/1LPfI8kPATAzojZMBalhli/7dbdddba786444110a762b75977a8fd8/how-it-works-issa-certified-personal-trainer.webp?fm=webp&w=1440&q=75" alt="Trainer" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold">Sarah Jenkins</h3>
+                    <p class="text-brand-500 text-sm uppercase font-semibold mb-4">Mobility Specialist</p>
+                    <p class="text-gray-400 text-sm mb-6">"Flexibility is the true measure of strength."</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="#" class="text-gray-500 hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-white"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-dark-900 rounded-2xl p-8 text-center border border-white/5 hover:border-brand-500 transition duration-300 group">
+                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 ring-4 ring-dark-800 group-hover:ring-brand-500 transition">
+                        <img src="https://images.unsplash.com/photo-1597347343908-2937e7dcc560?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Trainer" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold">Marcus Cole</h3>
+                    <p class="text-brand-500 text-sm uppercase font-semibold mb-4">HIIT Instructor</p>
+                    <p class="text-gray-400 text-sm mb-6">"Don't count the reps, make the reps count."</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="#" class="text-gray-500 hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-white"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-24 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Simple Pricing</h2>
+                <p class="text-gray-400">No hidden fees. Cancel anytime.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8 items-center">
+                <div class="bg-dark-800 p-8 rounded-2xl border border-white/5 hover:bg-dark-700 transition">
+                    <h3 class="text-xl font-semibold text-white">Starter</h3>
+                    <div class="my-6 flex items-baseline">
+                        <span class="text-4xl font-bold text-white">$29</span>
+                        <span class="text-gray-400 ml-2">/mo</span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-6">Essential access for the casual lifter.</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-sm text-gray-300"><i class="fa-solid fa-check text-green-500 mr-3"></i> Access to gym floor</li>
+                        <li class="flex items-center text-sm text-gray-300"><i class="fa-solid fa-check text-green-500 mr-3"></i> 1 Free fitness assessment</li>
+                        <li class="flex items-center text-sm text-gray-300"><i class="fa-solid fa-check text-green-500 mr-3"></i> Locker access</li>
+                        <li class="flex items-center text-sm text-gray-500"><i class="fa-solid fa-xmark mr-3"></i> Group classes</li>
+                    </ul>
+                    <a href="#" class="block w-full py-3 rounded-lg bg-white/10 hover:bg-white/20 text-center font-semibold transition">Get Started</a>
+                </div>
+
+                <div class="bg-dark-800 p-10 rounded-2xl border-2 border-brand-600 relative shadow-2xl shadow-brand-600/10 transform scale-105 z-10">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brand-600 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide text-white">Most Popular</div>
+                    <h3 class="text-xl font-semibold text-white">Athlete</h3>
+                    <div class="my-6 flex items-baseline">
+                        <span class="text-5xl font-bold text-white">$59</span>
+                        <span class="text-gray-400 ml-2">/mo</span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-6">Full unrestricted access for serious results.</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-sm text-white"><i class="fa-solid fa-check text-brand-500 mr-3"></i> 24/7 Gym Access</li>
+                        <li class="flex items-center text-sm text-white"><i class="fa-solid fa-check text-brand-500 mr-3"></i> Unlimited Group Classes</li>
+                        <li class="flex items-center text-sm text-white"><i class="fa-solid fa-check text-brand-500 mr-3"></i> Sauna & Recovery Zone</li>
+                        <li class="flex items-center text-sm text-white"><i class="fa-solid fa-check text-brand-500 mr-3"></i> Free Guest Pass (2x/mo)</li>
+                    </ul>
+                    <a href="#" class="block w-full py-3 rounded-lg bg-brand-600 hover:bg-brand-500 text-center font-semibold transition shadow-lg shadow-brand-600/25">Join Now</a>
+                </div>
+
+                <div class="bg-dark-800 p-8 rounded-2xl border border-white/5 hover:bg-dark-700 transition">
+                    <h3 class="text-xl font-semibold text-white">Elite</h3>
+                    <div class="my-6 flex items-baseline">
+                        <span class="text-4xl font-bold text-white">$99</span>
+                        <span class="text-gray-400 ml-2">/mo</span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-6">VIP treatment and personal coaching.</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-sm text-gray-300"><i class="fa-solid fa-check text-green-500 mr-3"></i> Everything in Athlete</li>
+                        <li class="flex items-center text-sm text-gray-300"><i class="fa-solid fa-check text-green-500 mr-3"></i> 2x Personal Training Sessions</li>
+                        <li class="flex items-center text-sm text-gray-300"><i class="fa-solid fa-check text-green-500 mr-3"></i> Customized Nutrition Plan</li>
+                        <li class="flex items-center text-sm text-gray-300"><i class="fa-solid fa-check text-green-500 mr-3"></i> Priority Support</li>
+                    </ul>
+                    <a href="#" class="block w-full py-3 rounded-lg bg-white/10 hover:bg-white/20 text-center font-semibold transition">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-bold leading-tight mb-6">Don't just take our word for it.</h2>
+                    <div class="flex gap-2 mb-6">
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <span class="ml-2 text-gray-400 text-sm">(500+ Reviews)</span>
+                    </div>
+                </div>
+                
+                <div class="bg-dark-900 p-8 rounded-2xl border border-white/5 relative">
+                    <i class="fa-solid fa-quote-right absolute top-8 right-8 text-4xl text-gray-800"></i>
+                    <p class="text-xl text-gray-300 italic mb-6 relative z-10">"I've been to five different gyms in the city, but The Fitness Hub is different. The atmosphere is electric, the equipment is always clean, and the trainers actually care about your progress. I've lost 20lbs in 3 months!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-700 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="User" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Jessica M.</h4>
+                            <p class="text-xs text-gray-500">Member since 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-20 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-600 to-orange-800"></div>
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Ready to transform your life?</h2>
+            <p class="text-orange-100 text-lg mb-8">Join The Fitness Hub today and get your first month for 50% off. Offer ends soon.</p>
+            <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input type="email" placeholder="Enter your email" class="flex-1 px-6 py-4 rounded-full bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:bg-white/20 focus:border-white">
+                <button class="px-8 py-4 bg-white text-brand-600 font-bold rounded-full hover:bg-gray-100 transition shadow-xl">Get Offer</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-dark-950 border-t border-white/5 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-dumbbell text-brand-500 text-xl"></i>
+                        <span class="font-bold text-xl tracking-tighter text-white">GYM<span class="text-brand-500">RIDE</span></span>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        The premier destination for fitness enthusiasts. We build strength, character, and community.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-brand-500 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition">Classes</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition">Membership</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-brand-500 transition">FAQ</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand-500"></i> 123 Fitness Blvd, Metro City</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-brand-500"></i> +1 (555) 000-0000</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-brand-500"></i> hello@gymride.com</li>
+                    </ul>
+                    <div class="flex gap-4 mt-6">
+                        <a href="#" class="w-8 h-8 rounded-full bg-dark-800 flex items-center justify-center text-gray-400 hover:bg-brand-500 hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-dark-800 flex items-center justify-center text-gray-400 hover:bg-brand-500 hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-dark-800 flex items-center justify-center text-gray-400 hover:bg-brand-500 hover:text-white transition"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/5 pt-8 text-center">
+                <p class="text-gray-600 text-sm">&copy; 2023 The Fitness Hub Fitness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
